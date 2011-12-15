@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+	<title>Stop Browsing Settings</title>
+	<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="common.js"></script>
+	<script type="text/javascript" src="options.js"></script>
+	<link rel="stylesheet" type="text/css" href="options.css" />
+  </head>
+ <body>
+	<h3>Enter Javascript Regular Expressions pattern that you want to block websites access to when active.</h3>
+
+	Active: <input type="checkbox" id="active" />
+
+	<h4>Active patterns</h4>
+	<div id="patterns"></div>
+
+	<h4>Add new pattern</h4>
+	<div class="pattern">
+	  <input type="text" class="pattern_value" value="" size="50" />
+	  <button type="button" class="add">Add</button>
+	</div>
+
+	<div class="pattern_template" style="display:none;">
+	  <input type="text" class="pattern_value" value="" size="50" />
+	  <button type="button" class="remove">Remove</button>
+	</div>
+</body>
+</html>

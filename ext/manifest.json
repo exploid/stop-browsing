@@ -1,0 +1,35 @@
+{		
+    "name": "Stop Browsing",
+    "version": "0.1.1",
+    "description": "Doesn't allow you to browse to the configured domains when active",
+	"homepage_url": "https://github.com/exploid/stop-browsing",
+
+    "permissions": [
+        "background",
+		"management",
+		"tabs"
+    ],
+
+    "background_page": "background.html",
+	"options_page": "options.html",
+
+    "content_scripts": [
+		{
+			"all_frames": true,
+			"matches": [ "<all_urls>" ],
+			"js":      [ "jquery-1.6.1.min.js", "contentscript.js" ],
+			"run_at":  "document_end"
+		}
+    ],
+
+	"browser_action": {
+		"default_title": "Toggle Stop Browsing"
+	}
+	
+	// "icons": {
+		// "16": "logo/logo-16.png",
+		// "48": "logo/logo-48.png",
+		// "128": "logo/logo-128.png"
+	// }
+
+}
