@@ -45,11 +45,9 @@ function removePatternToBlock(pattern) {
 
 function setBadge() {
 	if ( stopBrowsingIsActive() ) {
-		chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
-		chrome.browserAction.setBadgeText({ text: "Stop!" });
+		chrome.browserAction.setIcon({ "path": "icon-stop.png" });
 	} else {
-		chrome.browserAction.setBadgeBackgroundColor({ color: [0, 255, 0, 255] });
-		chrome.browserAction.setBadgeText({ text: " Go! " });
+		chrome.browserAction.setIcon({ "path": "icon-go.png" });
 	}
 }
 		
